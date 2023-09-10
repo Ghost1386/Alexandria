@@ -4,11 +4,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexandria.WebAPI", "Alexan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexandria.BusinessLogic", "Alexandria.BusinessLogic\Alexandria.BusinessLogic.csproj", "{186F3F54-AE40-4EB3-B382-80ECB4FF7943}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexandria.Common", "Alexandria.Common\Alexandria.Common.csproj", "{1E87F49C-7AB8-4E60-91C0-059758118D51}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexandria.Models", "Alexandria.Models\Alexandria.Models.csproj", "{96D9E553-0D3F-4975-828D-584BDA6C60FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexandria.DAL", "Alexandria.DAL\Alexandria.DAL.csproj", "{1E8658AA-342F-4E1B-9ECE-82CDCA5BC236}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexandria.Common", "Alexandria.Common\Alexandria.Common.csproj", "{5A1AB92D-81FA-41AA-A370-D5662597C2C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +24,6 @@ Global
 		{186F3F54-AE40-4EB3-B382-80ECB4FF7943}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{186F3F54-AE40-4EB3-B382-80ECB4FF7943}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{186F3F54-AE40-4EB3-B382-80ECB4FF7943}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E87F49C-7AB8-4E60-91C0-059758118D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E87F49C-7AB8-4E60-91C0-059758118D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E87F49C-7AB8-4E60-91C0-059758118D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E87F49C-7AB8-4E60-91C0-059758118D51}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96D9E553-0D3F-4975-828D-584BDA6C60FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96D9E553-0D3F-4975-828D-584BDA6C60FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96D9E553-0D3F-4975-828D-584BDA6C60FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,5 +32,9 @@ Global
 		{1E8658AA-342F-4E1B-9ECE-82CDCA5BC236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E8658AA-342F-4E1B-9ECE-82CDCA5BC236}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E8658AA-342F-4E1B-9ECE-82CDCA5BC236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1AB92D-81FA-41AA-A370-D5662597C2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1AB92D-81FA-41AA-A370-D5662597C2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1AB92D-81FA-41AA-A370-D5662597C2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1AB92D-81FA-41AA-A370-D5662597C2C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
