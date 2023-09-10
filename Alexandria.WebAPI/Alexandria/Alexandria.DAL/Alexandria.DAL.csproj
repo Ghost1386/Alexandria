@@ -6,9 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+
     <ItemGroup>
-      <Folder Include="Interfaces\" />
-      <Folder Include="Repositorys\" />
+      <ProjectReference Include="..\Alexandria.Common\Alexandria.Common.csproj" />
+      <ProjectReference Include="..\Alexandria.Models\Alexandria.Models.csproj" />
     </ItemGroup>
 
 </Project>
