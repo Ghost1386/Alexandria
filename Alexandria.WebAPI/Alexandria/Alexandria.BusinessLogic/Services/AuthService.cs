@@ -1,54 +1,48 @@
-﻿using System.Globalization;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using Alexandria.BusinessLogic.Interfaces;
+﻿using Alexandria.BusinessLogic.Interfaces;
+using Alexandria.Common.DTOs;
 using Alexandria.Common.DTOs.AuthDTOs;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Alexandria.BusinessLogic.Services;
 
 public class AuthService : IAuthService
 {
-    private readonly IConfiguration _configuration;
     private readonly IUserService _userService;
+    private readonly ITokenService _tokenService;
     
-    public AuthService(IConfiguration configuration, IUserService userService)
+    public AuthService(IUserService userService, ITokenService tokenService)
     {
-        _configuration = configuration;
         _userService = userService;
+        _tokenService = tokenService;
+    }
+
+    public async void Register(UserRegisterDto userRegisterDto)
+    {
+        var user = await _userService.CreateUser(userRegisterDto);
+        
+        _tokenService.CreateToken(user);
     }
     
-    public string Login(UserLoginDto userLoginDto)
+    public async Task<string> Login(UserLoginDto userLoginDto)
     {
-        var user = _userService.GetUser(userLoginDto);
+        var user = await _userService.GetUser(userLoginDto);
 
         if (user != null)
         {
-            var claims = new[] {
-                new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString(CultureInfo.CurrentCulture)),
-                new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim("IpAddress", user.IpAddress),
-                new Claim("MobileName", user.MobileName),
-                new Claim("DesktopName", user.DesktopName)
+            var identifier = new Identifier
+            {
+                Id = user.UserId
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            var token = new JwtSecurityToken(
-                _configuration["Jwt:Issuer"],
-                _configuration["Jwt:Audience"],
-                claims,
-                expires: DateTime.UtcNow.AddMonths(1),
-                signingCredentials: signIn);
+            var token = await _tokenService.GetToken(identifier);
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            if (DateTime.UtcNow > token.TimeEnd)
+            {
+                token.UserToken = await _tokenService.UpdateToken(user);
+            }
+
+            return token.UserToken;
         }
 
-        return null;
+        return string.Empty;
     }
 }

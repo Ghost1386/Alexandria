@@ -1,7 +1,11 @@
-﻿namespace Alexandria.Models.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Alexandria.Models.Models;
 
 public class User
 {
+    [Key]
     public int UserId { get; set; }
     
     public string? Email { get; set; }
@@ -10,9 +14,12 @@ public class User
     
     public byte[]? PasswordSalt { get; set; }
     
-    public string? IpAddress { get; set; }
-    
     public string? MobileName { get; set; }
     
     public string? DesktopName { get; set; }
+    
+    [ForeignKey("TokenId")]
+    public int TokenId { get; set; }
+    
+    public Token? Token { get; set; }
 }

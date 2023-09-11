@@ -16,9 +16,9 @@ public class UserService : IUserService
         _hashService = hashService;
     }
     
-    public User GetUser(UserLoginDto userLoginDto)
+    public async Task<User> GetUser(UserLoginDto userLoginDto)
     {
-        var user = _userRepository.GetUser(userLoginDto);
+        var user = await _userRepository.GetUser(userLoginDto);
 
         if (user != null)
         {
@@ -29,5 +29,23 @@ public class UserService : IUserService
         }
 
         return new User();
+    }
+
+    public async Task<User> CreateUser(UserRegisterDto userRegisterDto)
+    {
+        _hashService.CreatePasswordHash(userRegisterDto.Password, out byte[] passwordHash, out byte[] passwordSalt);
+        
+        var user = new User
+        {
+            Email = userRegisterDto.Email,
+            PasswordHash = passwordHash,
+            PasswordSalt = passwordSalt,
+            MobileName = userRegisterDto.MobileName,
+            DesktopName = userRegisterDto.DesktopName
+        };
+        
+        var newUser = await _userRepository.CreateUser(user);
+
+        return newUser;
     }
 }

@@ -5,5 +5,7 @@ namespace Alexandria.DAL.Interfaces;
 
 public interface IUserRepository
 {
-    User GetUser(UserLoginDto userLoginDto);
+    Task<User> GetUser(UserLoginDto userLoginDto);
+
+    Task<User> CreateUser(User user);
 }

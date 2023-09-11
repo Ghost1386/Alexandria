@@ -4,5 +4,5 @@ namespace Alexandria.BusinessLogic.Interfaces;
 
 public interface IAuthService
 {
-    string Login(UserLoginDto userLoginDto);
+    Task<string> Login(UserLoginDto userLoginDto);
 }

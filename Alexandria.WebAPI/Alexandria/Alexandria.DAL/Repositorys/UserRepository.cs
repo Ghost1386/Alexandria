@@ -2,6 +2,7 @@
 using Alexandria.DAL.Interfaces;
 using Alexandria.Models;
 using Alexandria.Models.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Alexandria.DAL.Repositorys;
 
@@ -14,9 +15,17 @@ public class UserRepository : IUserRepository
         _applicationContext = applicationContext;
     }
     
-    public User GetUser(UserLoginDto userLoginDto)
+    public async Task<User> GetUser(UserLoginDto userLoginDto)
     {
-        var user = _applicationContext.Users.FirstOrDefault(u => u.Email == userLoginDto.Email);
+        var user = await _applicationContext.Users.FirstOrDefaultAsync(u => u.Email == userLoginDto.Email);
+
+        return user;
+    }
+
+    public async Task<User> CreateUser(User user)
+    {
+        await _applicationContext.Users.AddAsync(user);
+        await _applicationContext.SaveChangesAsync();
 
         return user;
     }

@@ -5,5 +5,7 @@ namespace Alexandria.BusinessLogic.Interfaces;
 
 public interface IUserService
 {
-    User GetUser(UserLoginDto userLoginDto);
+    Task<User> GetUser(UserLoginDto userLoginDto);
+
+    Task<User> CreateUser(UserRegisterDto userRegisterDto);
 }
