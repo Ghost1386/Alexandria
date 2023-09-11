@@ -8,4 +8,6 @@ public interface IUserService
     Task<User> GetUser(UserLoginDto userLoginDto);
 
     Task<User> CreateUser(UserRegisterDto userRegisterDto);
+
+    Task<bool> CheckUser(UserCheckDto userCheckDto);
 }

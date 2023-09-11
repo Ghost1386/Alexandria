@@ -48,4 +48,11 @@ public class UserService : IUserService
 
         return newUser;
     }
+
+    public async Task<bool> CheckUser(UserCheckDto userCheckDto)
+    {
+        var isRegistered = await _userRepository.CheckUser(userCheckDto);
+
+        return isRegistered;
+    }
 }

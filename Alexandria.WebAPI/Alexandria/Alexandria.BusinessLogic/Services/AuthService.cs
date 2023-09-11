@@ -45,4 +45,11 @@ public class AuthService : IAuthService
 
         return string.Empty;
     }
+
+    public async Task<bool> IsRegistered(UserCheckDto userCheckDto)
+    {
+        var isRegistered = await _userService.CheckUser(userCheckDto);
+
+        return isRegistered;
+    }
 }

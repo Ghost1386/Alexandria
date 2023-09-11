@@ -8,4 +8,6 @@ public interface IUserRepository
     Task<User> GetUser(UserLoginDto userLoginDto);
 
     Task<User> CreateUser(User user);
+
+    Task<bool> CheckUser(UserCheckDto userCheckDto);
 }

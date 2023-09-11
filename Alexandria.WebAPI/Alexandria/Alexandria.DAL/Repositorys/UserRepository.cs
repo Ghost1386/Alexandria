@@ -29,4 +29,11 @@ public class UserRepository : IUserRepository
 
         return user;
     }
+    
+    public async Task<bool> CheckUser(UserCheckDto userCheckDto)
+    {
+        var isRegistered = await _applicationContext.Users.AnyAsync(u => u.Email == userCheckDto.Email);
+
+        return isRegistered;
+    }
 }

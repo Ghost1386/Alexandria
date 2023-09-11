@@ -13,4 +13,9 @@
     </ItemGroup>
 
 
+    <ItemGroup>
+      <ProjectReference Include="..\Alexandria.BusinessLogic\Alexandria.BusinessLogic.csproj" />
+      <ProjectReference Include="..\Alexandria.Common\Alexandria.Common.csproj" />
+    </ItemGroup>
+
 </Project>
