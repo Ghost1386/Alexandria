@@ -1,6 +1,8 @@
-﻿using Alexandria.DAL.Interfaces;
+﻿using Alexandria.Common.DTOs.LectureDTOs;
+using Alexandria.DAL.Interfaces;
 using Alexandria.Models;
 using Alexandria.Models.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Alexandria.DAL.Repositorys;
 
@@ -17,5 +19,13 @@ public class LectureRepository : ILectureRepository
     {
         await _applicationContext.Lectures.AddAsync(lecture);
         await _applicationContext.SaveChangesAsync();
+    }
+
+    public async Task<Lecture> GetLecture(RequestLectureGetDto requestLectureGetDto)
+    {
+        var lecture = await _applicationContext.Lectures.FirstOrDefaultAsync(l => 
+            l.CombinePlacement == requestLectureGetDto.CombinePlacement);
+
+        return lecture;
     }
 }

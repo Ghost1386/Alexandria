@@ -1,4 +1,5 @@
-﻿using Alexandria.BusinessLogic.Interfaces;
+﻿using System.Text.Json;
+using Alexandria.BusinessLogic.Interfaces;
 using Alexandria.Common.DTOs.AuthDTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,10 +10,10 @@ namespace Alexandria.WebAPI.Controllers;
 [Route("[controller]")]
 public class AuthController : ControllerBase
 {
-    private readonly Logger<AuthController> _logger;
+    private readonly ILogger<AuthController> _logger;
     private readonly IAuthService _authService;
     
-    public AuthController(Logger<AuthController> logger, IAuthService authService)
+    public AuthController(ILogger<AuthController> logger, IAuthService authService)
     {
         _logger = logger;
         _authService = authService;
@@ -20,38 +21,58 @@ public class AuthController : ControllerBase
     
     [AllowAnonymous]
     [HttpPost("/auth/login")]
-    public async Task<IActionResult> Login(UserLoginDto userLoginDto)
+    public async Task<IActionResult> Login(RequestUserLoginDto requestUserLoginDto)
     {
-        var token = await _authService.Login(userLoginDto);
-
-        if (!string.IsNullOrEmpty(token))
+        try
         {
-            _logger.LogInformation($"{DateTime.UtcNow}: User with email {userLoginDto.Email} is sing in");
-            
-            return Ok(token);
-        }
+            var token = await _authService.Login(requestUserLoginDto);
 
-        return Unauthorized();
+            if (!string.IsNullOrEmpty(token))
+            {
+                var jsonToken = JsonSerializer.Serialize(token);
+            
+                _logger.LogInformation($"{DateTime.UtcNow}: User with email {requestUserLoginDto.Email} is sing in");
+            
+                return Ok(jsonToken);
+            }
+
+            return Unauthorized();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError($"{DateTime.UtcNow}: {e.Message}");
+
+            return BadRequest();
+        }
     }
     
     [AllowAnonymous]
     [HttpPost("/auth/register")]
-    public async Task<IActionResult> Register(UserRegisterDto userRegisterDto)
+    public async Task<IActionResult> Register(RequestUserRegisterDto requestUserRegisterDto)
     {
-        var userCheckDto = new UserCheckDto
+        try
         {
-            Email = userRegisterDto.Email
-        };
+            var requestUserCheckDto = new RequestUserCheckDto
+            {
+                Email = requestUserRegisterDto.Email
+            };
 
-        if (!await _authService.IsRegistered(userCheckDto))
-        {
-            _authService.Register(userRegisterDto);
+            if (!await _authService.IsRegistered(requestUserCheckDto))
+            {
+                _authService.Register(requestUserRegisterDto);
 
-            _logger.LogInformation($"{DateTime.UtcNow}: Registered new user with email {userRegisterDto.Email}");
+                _logger.LogInformation($"{DateTime.UtcNow}: Registered new user with email {requestUserRegisterDto.Email}");
 
-            return Ok();
+                return Ok();
+            }
+
+            return BadRequest();
         }
+        catch (Exception e)
+        {
+            _logger.LogError($"{DateTime.UtcNow}: {e.Message}");
 
-        return BadRequest();
+            return BadRequest();
+        }
     }
 }

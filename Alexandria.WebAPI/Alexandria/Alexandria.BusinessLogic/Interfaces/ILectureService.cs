@@ -1,9 +1,11 @@
-﻿using Alexandria.Common.DTOs;
-using Alexandria.Common.DTOs.LectureDTOs;
+﻿using Alexandria.Common.DTOs.LectureDTOs;
+using Alexandria.Models.Models;
 
 namespace Alexandria.BusinessLogic.Interfaces;
 
 public interface ILectureService
 {
-    void CreateLecture(LectureCreateDto lectureCreateDto, Identifier identifier);
+    void CreateLecture(RequestLectureCreateDto requestLectureCreateDto, User user);
+
+    Task<ResponseLectureGetDto> GetLecture(RequestLectureGetDto requestLectureGetDto);
 }

@@ -1,6 +1,6 @@
 ﻿namespace Alexandria.Common.DTOs.LectureDTOs;
 
-public class LectureCreateDto
+public class RequestLectureCreateDto
 {
     public string? Title { get; set; }
     

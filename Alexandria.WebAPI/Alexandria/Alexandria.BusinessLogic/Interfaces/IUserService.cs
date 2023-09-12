@@ -7,11 +7,13 @@ namespace Alexandria.BusinessLogic.Interfaces;
 
 public interface IUserService
 {
-    Task<User> GetUser(UserLoginDto userLoginDto);
+    Task<User> GetUser(RequestUserLoginDto requestUserLoginDto);
 
-    Task<User> CreateUser(UserRegisterDto userRegisterDto);
+    Task<User> GetUser(Identifier identifier);
 
-    Task<bool> CheckUser(UserCheckDto userCheckDto);
+    Task<User> CreateUser(RequestUserRegisterDto requestUserRegisterDto);
+
+    Task<bool> CheckUser(RequestUserCheckDto userCheckDto);
 
     void ChangeUserRole(Identifier identifier, UserRoleType newUserRoleType);
 }

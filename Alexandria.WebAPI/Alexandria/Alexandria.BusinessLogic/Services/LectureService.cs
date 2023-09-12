@@ -1,5 +1,4 @@
 ﻿using Alexandria.BusinessLogic.Interfaces;
-using Alexandria.Common.DTOs;
 using Alexandria.Common.DTOs.LectureDTOs;
 using Alexandria.DAL.Interfaces;
 using Alexandria.Models.Models;
@@ -8,45 +7,48 @@ namespace Alexandria.BusinessLogic.Services;
 
 public class LectureService : ILectureService
 {
-    private readonly IUserRepository _userRepository;
     private readonly ILectureRepository _lectureRepository;
-    private readonly IEducationalInstitutionRepository _educationalInstitutionRepository;
-    private readonly IModificationRepository _modificationRepository;
+    private readonly IModificationService _modificationService;
     
-    public LectureService(IUserRepository userRepository, ILectureRepository lectureRepository, 
-        IEducationalInstitutionRepository educationalInstitutionRepository, IModificationRepository modificationRepository)
+    public LectureService(ILectureRepository lectureRepository, IModificationService modificationService)
     {
-        _userRepository = userRepository;
         _lectureRepository = lectureRepository;
-        _educationalInstitutionRepository = educationalInstitutionRepository;
-        _modificationRepository = modificationRepository;
+        _modificationService = modificationService;
     }
     
-    public async void CreateLecture(LectureCreateDto lectureCreateDto, Identifier identifier)
+    public void CreateLecture(RequestLectureCreateDto requestLectureCreateDto, User user)
     {
         var lecture = new Lecture
         {
-            Title = lectureCreateDto.Title,
-            Text = lectureCreateDto.Text,
-        };
-
-        var educationalInstitution = new EducationalInstitution
-        {
-            CombinePlacement = lectureCreateDto.CombinePlacement,
-            Lecture = lecture
+            Title = requestLectureCreateDto.Title,
+            Text = requestLectureCreateDto.Text,
+            CombinePlacement = requestLectureCreateDto.CombinePlacement
         };
 
         var modification = new Modification
         {
             LastModifiedDate = DateTime.UtcNow,
-            User = await _userRepository.GetUser(identifier),
+            User = user,
             Lecture = lecture
         };
         
-        lecture.Modifications.Add(modification);
+        lecture.Modifications?.Add(modification);
         
         _lectureRepository.CreateLecture(lecture);
-        _educationalInstitutionRepository.CreateEducationalInstitution(educationalInstitution);
-        _modificationRepository.CreateModification(modification);
+        _modificationService.CreateModification(modification);
+    }
+
+    public async Task<ResponseLectureGetDto> GetLecture(RequestLectureGetDto requestLectureGetDto)
+    {
+        var lecture = await _lectureRepository.GetLecture(requestLectureGetDto);
+
+        var responseLectureGetDto = new ResponseLectureGetDto
+        {
+            CombinePlacement = lecture.CombinePlacement,
+            Title = lecture.Title,
+            Text = lecture.Title
+        };
+        
+        return responseLectureGetDto;
     }
 }

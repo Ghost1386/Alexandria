@@ -15,16 +15,16 @@ public class AuthService : IAuthService
         _tokenService = tokenService;
     }
 
-    public async void Register(UserRegisterDto userRegisterDto)
+    public async void Register(RequestUserRegisterDto requestUserRegisterDto)
     {
-        var user = await _userService.CreateUser(userRegisterDto);
+        var user = await _userService.CreateUser(requestUserRegisterDto);
         
         _tokenService.CreateToken(user);
     }
     
-    public async Task<string> Login(UserLoginDto userLoginDto)
+    public async Task<string> Login(RequestUserLoginDto requestUserLoginDto)
     {
-        var user = await _userService.GetUser(userLoginDto);
+        var user = await _userService.GetUser(requestUserLoginDto);
 
         if (user != null)
         {
@@ -46,9 +46,9 @@ public class AuthService : IAuthService
         return string.Empty;
     }
 
-    public async Task<bool> IsRegistered(UserCheckDto userCheckDto)
+    public async Task<bool> IsRegistered(RequestUserCheckDto requestUserCheckDto)
     {
-        var isRegistered = await _userService.CheckUser(userCheckDto);
+        var isRegistered = await _userService.CheckUser(requestUserCheckDto);
 
         return isRegistered;
     }

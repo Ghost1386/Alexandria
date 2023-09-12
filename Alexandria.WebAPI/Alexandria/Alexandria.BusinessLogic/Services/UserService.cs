@@ -18,13 +18,13 @@ public class UserService : IUserService
         _hashService = hashService;
     }
     
-    public async Task<User> GetUser(UserLoginDto userLoginDto)
+    public async Task<User> GetUser(RequestUserLoginDto requestUserLoginDto)
     {
-        var user = await _userRepository.GetUser(userLoginDto);
+        var user = await _userRepository.GetUser(requestUserLoginDto);
 
         if (user != null)
         {
-            if (_hashService.VerifyPasswordHash(userLoginDto.Password, user.PasswordSalt, user.PasswordHash))
+            if (_hashService.VerifyPasswordHash(requestUserLoginDto.Password, user.PasswordSalt, user.PasswordHash))
             {
                 return user;
             }
@@ -32,18 +32,25 @@ public class UserService : IUserService
 
         return new User();
     }
-
-    public async Task<User> CreateUser(UserRegisterDto userRegisterDto)
+    
+    public async Task<User> GetUser(Identifier identifier)
     {
-        _hashService.CreatePasswordHash(userRegisterDto.Password, out byte[] passwordHash, out byte[] passwordSalt);
+        var user = await _userRepository.GetUser(identifier);
+
+        return user;
+    }
+
+    public async Task<User> CreateUser(RequestUserRegisterDto requestUserRegisterDto)
+    {
+        _hashService.CreatePasswordHash(requestUserRegisterDto.Password, out byte[] passwordHash, out byte[] passwordSalt);
         
         var user = new User
         {
-            Email = userRegisterDto.Email,
+            Email = requestUserRegisterDto.Email,
             PasswordHash = passwordHash,
             PasswordSalt = passwordSalt,
-            MobileName = userRegisterDto.MobileName,
-            DesktopName = userRegisterDto.DesktopName,
+            MobileName = requestUserRegisterDto.MobileName,
+            DesktopName = requestUserRegisterDto.DesktopName,
             UserRoleType = (int)UserRoleType.User
         };
         
@@ -52,9 +59,9 @@ public class UserService : IUserService
         return newUser;
     }
 
-    public async Task<bool> CheckUser(UserCheckDto userCheckDto)
+    public async Task<bool> CheckUser(RequestUserCheckDto requestUserCheckDto)
     {
-        var isRegistered = await _userRepository.CheckUser(userCheckDto);
+        var isRegistered = await _userRepository.CheckUser(requestUserCheckDto);
 
         return isRegistered;
     }

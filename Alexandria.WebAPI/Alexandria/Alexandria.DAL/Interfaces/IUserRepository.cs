@@ -6,13 +6,13 @@ namespace Alexandria.DAL.Interfaces;
 
 public interface IUserRepository
 {
-    Task<User> GetUser(UserLoginDto userLoginDto);
+    Task<User> GetUser(RequestUserLoginDto requestUserLoginDto);
 
     Task<User> GetUser(Identifier identifier);
 
     Task<User> CreateUser(User user);
 
-    Task<bool> CheckUser(UserCheckDto userCheckDto);
+    Task<bool> CheckUser(RequestUserCheckDto requestUserCheckDto);
 
     void ChangeUserRole(User user);
 }

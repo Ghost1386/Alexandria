@@ -10,7 +10,6 @@ public class ApplicationContext : DbContext
         Database.EnsureCreated();
     }
     
-    public DbSet<EducationalInstitution> EducationalInstitutions { get; set; }
     public DbSet<Lecture> Lectures { get; set; }
     public DbSet<Modification> ModeModifications { get; set; }
     public DbSet<Token> Tokens { get; set; }

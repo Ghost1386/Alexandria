@@ -11,14 +11,28 @@
   <component name="ChangeListManager">
     <list default="true" id="c23267aa-6c4f-4460-b268-09d82209f326" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Alexandria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Alexandria/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IAuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IEducationalInstitutionService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/ILectureService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/ILectureService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/EducationalInstitutionService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/LectureService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/LectureService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.Common/Alexandria.Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/Alexandria.Common.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.Common/DTOs/AuthDTOs/UserCheckDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/DTOs/AuthDTOs/RequestUserCheckDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.Common/DTOs/AuthDTOs/UserLoginDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/DTOs/AuthDTOs/RequestUserLoginDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.Common/DTOs/AuthDTOs/UserRegisterDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/DTOs/AuthDTOs/RequestUserRegisterDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.Common/DTOs/LectureDTOs/LectureCreateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/DTOs/LectureDTOs/RequestLectureCreateDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/IEducationalInstitutionRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/ILectureRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/ILectureRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/EducationalInstitutionRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/LectureRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/LectureRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/UserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.Models/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.Models/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.Models/Models/EducationalInstitution.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.Models/Models/Lecture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/Models/Lecture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/Controllers/AuthController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +144,8 @@
       <workItem from="1694415041332" duration="4919000" />
       <workItem from="1694427037907" duration="2773000" />
       <workItem from="1694457821213" duration="5893000" />
+      <workItem from="1694512045214" duration="4623000" />
+      <workItem from="1694544674515" duration="5028000" />
     </task>
     <task id="LOCAL-00001" summary="added back infastructure">
       <option name="closed" value="true" />
@@ -171,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694422094886</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="backend: added lecture create">
+      <option name="closed" value="true" />
+      <created>1694522258417</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694522258417</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +209,7 @@
     <MESSAGE value="added death bibl" />
     <MESSAGE value="backend: complete auth service" />
     <MESSAGE value="backend: implement authController" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend: implement authController" />
+    <MESSAGE value="backend: added lecture create" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend: added lecture create" />
   </component>
 </project>

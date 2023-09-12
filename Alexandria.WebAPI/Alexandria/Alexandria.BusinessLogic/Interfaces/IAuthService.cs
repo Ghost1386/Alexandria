@@ -4,9 +4,9 @@ namespace Alexandria.BusinessLogic.Interfaces;
 
 public interface IAuthService
 {
-    Task<string> Login(UserLoginDto userLoginDto);
+    Task<string> Login(RequestUserLoginDto requestUserLoginDto);
 
-    void Register(UserRegisterDto userRegisterDto);
+    void Register(RequestUserRegisterDto requestUserRegisterDto);
 
-    Task<bool> IsRegistered(UserCheckDto userCheckDto);
+    Task<bool> IsRegistered(RequestUserCheckDto requestUserCheckDto);
 }

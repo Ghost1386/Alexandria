@@ -1,6 +1,6 @@
 ﻿namespace Alexandria.Common.DTOs.AuthDTOs;
 
-public class UserLoginDto
+public class RequestUserLoginDto
 {
     public string? Email { get; set; }
     

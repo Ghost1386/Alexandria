@@ -16,9 +16,9 @@ public class UserRepository : IUserRepository
         _applicationContext = applicationContext;
     }
     
-    public async Task<User> GetUser(UserLoginDto userLoginDto)
+    public async Task<User> GetUser(RequestUserLoginDto requestUserLoginDto)
     {
-        var user = await _applicationContext.Users.FirstOrDefaultAsync(u => u.Email == userLoginDto.Email);
+        var user = await _applicationContext.Users.FirstOrDefaultAsync(u => u.Email == requestUserLoginDto.Email);
 
         return user;
     }
@@ -38,9 +38,9 @@ public class UserRepository : IUserRepository
         return user;
     }
     
-    public async Task<bool> CheckUser(UserCheckDto userCheckDto)
+    public async Task<bool> CheckUser(RequestUserCheckDto requestUserCheckDto)
     {
-        var isRegistered = await _applicationContext.Users.AnyAsync(u => u.Email == userCheckDto.Email);
+        var isRegistered = await _applicationContext.Users.AnyAsync(u => u.Email == requestUserCheckDto.Email);
 
         return isRegistered;
     }
