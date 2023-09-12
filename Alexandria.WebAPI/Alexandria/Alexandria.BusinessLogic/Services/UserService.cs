@@ -1,5 +1,7 @@
 ﻿using Alexandria.BusinessLogic.Interfaces;
+using Alexandria.Common.DTOs;
 using Alexandria.Common.DTOs.AuthDTOs;
+using Alexandria.Common.Enums;
 using Alexandria.DAL.Interfaces;
 using Alexandria.Models.Models;
 
@@ -41,7 +43,8 @@ public class UserService : IUserService
             PasswordHash = passwordHash,
             PasswordSalt = passwordSalt,
             MobileName = userRegisterDto.MobileName,
-            DesktopName = userRegisterDto.DesktopName
+            DesktopName = userRegisterDto.DesktopName,
+            UserRoleType = (int)UserRoleType.User
         };
         
         var newUser = await _userRepository.CreateUser(user);
@@ -54,5 +57,14 @@ public class UserService : IUserService
         var isRegistered = await _userRepository.CheckUser(userCheckDto);
 
         return isRegistered;
+    }
+
+    public async void ChangeUserRole(Identifier identifier, UserRoleType newUserRoleType)
+    {
+        var user = await _userRepository.GetUser(identifier);
+
+        user.UserRoleType = (int)newUserRoleType;
+        
+        _userRepository.ChangeUserRole(user);
     }
 }

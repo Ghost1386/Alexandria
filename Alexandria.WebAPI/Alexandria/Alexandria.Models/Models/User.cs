@@ -18,8 +18,12 @@ public class User
     
     public string? DesktopName { get; set; }
     
+    public int UserRoleType { get; set; }
+    
     [ForeignKey("TokenId")]
     public int TokenId { get; set; }
     
     public Token? Token { get; set; }
+    
+    public List<Modification>? Modifications { get; set; }
 }

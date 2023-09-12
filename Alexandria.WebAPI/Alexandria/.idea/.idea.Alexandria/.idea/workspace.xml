@@ -11,15 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c23267aa-6c4f-4460-b268-09d82209f326" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Alexandria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Alexandria/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IAuthService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/AuthService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.Common/Alexandria.Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/Alexandria.Common.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/IUserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/UserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.Models/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/ApplicationContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.Models/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +32,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -128,6 +127,9 @@
       <workItem from="1694352709753" duration="16000" />
       <workItem from="1694352864722" duration="623000" />
       <workItem from="1694372744527" duration="4921000" />
+      <workItem from="1694415041332" duration="4919000" />
+      <workItem from="1694427037907" duration="2773000" />
+      <workItem from="1694457821213" duration="5893000" />
     </task>
     <task id="LOCAL-00001" summary="added back infastructure">
       <option name="closed" value="true" />
@@ -153,7 +155,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694353164711</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="backend: complete auth service">
+      <option name="closed" value="true" />
+      <created>1694419358814</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694419358815</updated>
+    </task>
+    <task id="LOCAL-00005" summary="backend: implement authController">
+      <option name="closed" value="true" />
+      <created>1694422094885</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694422094886</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +183,8 @@
     <MESSAGE value="added back infastructure" />
     <MESSAGE value="added jwt auth" />
     <MESSAGE value="added death bibl" />
-    <option name="LAST_COMMIT_MESSAGE" value="added death bibl" />
+    <MESSAGE value="backend: complete auth service" />
+    <MESSAGE value="backend: implement authController" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend: implement authController" />
   </component>
 </project>

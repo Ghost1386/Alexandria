@@ -1,4 +1,5 @@
-﻿using Alexandria.Common.DTOs.AuthDTOs;
+﻿using Alexandria.Common.DTOs;
+using Alexandria.Common.DTOs.AuthDTOs;
 using Alexandria.DAL.Interfaces;
 using Alexandria.Models;
 using Alexandria.Models.Models;
@@ -21,6 +22,13 @@ public class UserRepository : IUserRepository
 
         return user;
     }
+    
+    public async Task<User> GetUser(Identifier identifier)
+    {
+        var user = await _applicationContext.Users.FirstOrDefaultAsync(u => u.UserId == identifier.Id);
+
+        return user;
+    }
 
     public async Task<User> CreateUser(User user)
     {
@@ -35,5 +43,11 @@ public class UserRepository : IUserRepository
         var isRegistered = await _applicationContext.Users.AnyAsync(u => u.Email == userCheckDto.Email);
 
         return isRegistered;
+    }
+
+    public async void ChangeUserRole(User user)
+    {
+        _applicationContext.Update(user);
+        await _applicationContext.SaveChangesAsync();
     }
 }
