@@ -13,4 +13,12 @@
       <ProjectReference Include="..\Alexandria.Models\Alexandria.Models.csproj" />
     </ItemGroup>
 
+
+
+
+    <ItemGroup>
+      <PackageReference Include="Braintree" Version="5.19.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    </ItemGroup>
+
 </Project>

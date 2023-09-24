@@ -1,7 +1,5 @@
-﻿using System.Security.Claims;
-using System.Text.Json;
+﻿using System.Text.Json;
 using Alexandria.BusinessLogic.Interfaces;
-using Alexandria.Common.DTOs;
 using Alexandria.Common.DTOs.LectureDTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,13 +13,17 @@ public class LectureController : ControllerBase
     private readonly ILogger<LectureController> _logger;
     private readonly ILectureService _lectureService;
     private readonly IUserService _userService;
+    private readonly IReviewService _reviewService;
+    private readonly AuthController _authController;
     
     public LectureController(ILogger<LectureController> logger, ILectureService lectureService, 
-        IUserService userService)
+        IUserService userService, IReviewService reviewService, AuthController authController)
     {
         _logger = logger;
         _lectureService = lectureService;
         _userService = userService;
+        _reviewService = reviewService;
+        _authController = authController;
     }
     
     [Authorize]
@@ -30,10 +32,7 @@ public class LectureController : ControllerBase
     {
         try
         {
-            var identifier = new Identifier
-            {
-                Id = Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier))
-            };
+            var identifier = _authController.GetUserIdentifier();
 
             var user = await _userService.GetUser(identifier);
 
@@ -59,6 +58,10 @@ public class LectureController : ControllerBase
         try
         {
             var lecture = await _lectureService.GetLecture(requestLectureGetDto);
+
+            var identifier = _authController.GetUserIdentifier();
+
+            _reviewService.CreateReview(identifier, requestLectureGetDto);
 
             var jsonLecture = JsonSerializer.Serialize(lecture);
             

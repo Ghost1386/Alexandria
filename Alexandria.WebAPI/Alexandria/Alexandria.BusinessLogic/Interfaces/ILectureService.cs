@@ -8,4 +8,6 @@ public interface ILectureService
     void CreateLecture(RequestLectureCreateDto requestLectureCreateDto, User user);
 
     Task<ResponseLectureGetDto> GetLecture(RequestLectureGetDto requestLectureGetDto);
+
+    List<ResponseLectureGetDto> GetRecommendationsLecture(List<RequestLectureGetDto> requestLectureGetDtos);
 }

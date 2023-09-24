@@ -1,5 +1,7 @@
-﻿using System.Text.Json;
+﻿using System.Security.Claims;
+using System.Text.Json;
 using Alexandria.BusinessLogic.Interfaces;
+using Alexandria.Common.DTOs;
 using Alexandria.Common.DTOs.AuthDTOs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -74,5 +76,22 @@ public class AuthController : ControllerBase
 
             return BadRequest();
         }
+    }
+    
+    public Identifier GetUserIdentifier()
+    {
+        var identifier = new Identifier
+        {
+            Id = Convert.ToInt32(User.FindFirstValue(ClaimTypes.NameIdentifier))
+        };
+
+        return identifier;
+    }
+    
+    public string GetUserEmail()
+    {
+        var email = Convert.ToString(User.FindFirstValue(ClaimTypes.Email));
+
+        return email;
     }
 }

@@ -28,4 +28,12 @@ public class LectureRepository : ILectureRepository
 
         return lecture;
     }
+    
+    public List<Lecture> GetRecommendationsLecture(List<RequestLectureGetDto> requestLectureGetDtos)
+    {
+        var lecture = _applicationContext.Lectures.Where(l => l.CombinePlacement!.
+            Contains(requestLectureGetDtos.First().CombinePlacement)).ToList();
+
+        return lecture;
+    }
 }

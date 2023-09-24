@@ -51,4 +51,20 @@ public class LectureService : ILectureService
         
         return responseLectureGetDto;
     }
+    
+    public List<ResponseLectureGetDto> GetRecommendationsLecture(List<RequestLectureGetDto> requestLectureGetDtos)
+    {
+        var lectures = _lectureRepository.GetRecommendationsLecture(requestLectureGetDtos);
+
+        var responseLectureGetDtos = lectures.Select(l => new ResponseLectureGetDto
+        {
+            CombinePlacement = l.CombinePlacement,
+            Title = l.Title,
+            Text = l.Text
+        }).ToList();
+
+        var responseLectureGetDtosWithoutDupes = responseLectureGetDtos.Distinct().ToList();
+        
+        return responseLectureGetDtosWithoutDupes;
+    }
 }

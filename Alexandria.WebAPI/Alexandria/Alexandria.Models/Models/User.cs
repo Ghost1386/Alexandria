@@ -20,6 +20,8 @@ public class User
     
     public int UserRoleType { get; set; }
     
+    
+    
     [ForeignKey("TokenId")]
     public int TokenId { get; set; }
     

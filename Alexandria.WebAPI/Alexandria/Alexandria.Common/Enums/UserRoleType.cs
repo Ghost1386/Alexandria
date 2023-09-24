@@ -3,6 +3,7 @@
 public enum UserRoleType
 {
     User,
+    Premium,
     Editor,
     Admin
 }
