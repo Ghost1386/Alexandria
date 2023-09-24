@@ -1,5 +1,4 @@
 ﻿using Alexandria.BusinessLogic.Interfaces;
-using Alexandria.Common.DTOs;
 using Alexandria.Common.DTOs.AuthDTOs;
 
 namespace Alexandria.BusinessLogic.Services;
@@ -18,8 +17,13 @@ public class AuthService : IAuthService
     public async void Register(RequestUserRegisterDto requestUserRegisterDto)
     {
         var user = await _userService.CreateUser(requestUserRegisterDto);
+
+        if (user != null)
+        {
+            var newUser = await _userService.GetUserByEmail(requestUserRegisterDto.Email);
         
-        _tokenService.CreateToken(user);
+            _tokenService.CreateToken(newUser);
+        }
     }
     
     public async Task<string> Login(RequestUserLoginDto requestUserLoginDto)
@@ -28,19 +32,9 @@ public class AuthService : IAuthService
 
         if (user != null)
         {
-            var identifier = new Identifier
-            {
-                Id = user.UserId
-            };
+            var token = _tokenService.CreateToken(user);
 
-            var token = await _tokenService.GetToken(identifier);
-
-            if (DateTime.UtcNow > token.TimeEnd)
-            {
-                token.UserToken = await _tokenService.UpdateToken(user);
-            }
-
-            return token.UserToken;
+            return token;
         }
 
         return string.Empty;

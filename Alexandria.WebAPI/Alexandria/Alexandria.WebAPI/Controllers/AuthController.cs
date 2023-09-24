@@ -23,7 +23,7 @@ public class AuthController : ControllerBase
     
     [AllowAnonymous]
     [HttpPost("/auth/login")]
-    public async Task<IActionResult> Login(RequestUserLoginDto requestUserLoginDto)
+    public async Task<IActionResult> Login([FromForm] RequestUserLoginDto requestUserLoginDto)
     {
         try
         {
@@ -50,7 +50,7 @@ public class AuthController : ControllerBase
     
     [AllowAnonymous]
     [HttpPost("/auth/register")]
-    public async Task<IActionResult> Register(RequestUserRegisterDto requestUserRegisterDto)
+    public async Task<IActionResult> Register([FromForm] RequestUserRegisterDto requestUserRegisterDto)
     {
         try
         {
@@ -78,6 +78,8 @@ public class AuthController : ControllerBase
         }
     }
     
+    [AllowAnonymous]
+    [HttpPost("/auth/getUserIdentifier")]
     public Identifier GetUserIdentifier()
     {
         var identifier = new Identifier
@@ -88,6 +90,8 @@ public class AuthController : ControllerBase
         return identifier;
     }
     
+    [AllowAnonymous]
+    [HttpPost("/auth/getUserEmail")]
     public string GetUserEmail()
     {
         var email = Convert.ToString(User.FindFirstValue(ClaimTypes.Email));

@@ -1,0 +1,17 @@
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\bin\Debug\net7.0\Alexandria.DAL.deps.json
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\bin\Debug\net7.0\Alexandria.DAL.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\bin\Debug\net7.0\Alexandria.DAL.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\bin\Debug\net7.0\Alexandria.Common.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\bin\Debug\net7.0\Alexandria.Models.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\bin\Debug\net7.0\Alexandria.Common.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\bin\Debug\net7.0\Alexandria.Models.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\Alexandria.DAL.csproj.AssemblyReference.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\Alexandria.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\Alexandria.DAL.AssemblyInfoInputs.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\Alexandria.DAL.AssemblyInfo.cs
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\Alexandria.DAL.csproj.CoreCompileInputs.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\Alexandria.DAL.csproj.CopyComplete
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\Alexandria.DAL.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\refint\Alexandria.DAL.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\Alexandria.DAL.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.DAL\obj\Debug\net7.0\ref\Alexandria.DAL.dll

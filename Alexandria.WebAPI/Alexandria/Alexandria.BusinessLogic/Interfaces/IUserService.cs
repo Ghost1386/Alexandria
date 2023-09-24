@@ -11,6 +11,8 @@ public interface IUserService
 
     Task<User> GetUser(Identifier identifier);
 
+    Task<User> GetUserByEmail(string email);
+
     Task<User> CreateUser(RequestUserRegisterDto requestUserRegisterDto);
 
     Task<bool> CheckUser(RequestUserCheckDto userCheckDto);

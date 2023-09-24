@@ -6,7 +6,7 @@ public class Payment
     
     public int UserId { get; set; }
     
-    public string? UserToken { get; set; }
+    public string? UserPaymentToken { get; set; }
     
     public DateTime DateTime { get; set; }
 }

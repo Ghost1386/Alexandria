@@ -28,7 +28,7 @@ public class LectureController : ControllerBase
     
     [Authorize]
     [HttpPost("/lecture/create")]
-    public async Task<IActionResult> Create(RequestLectureCreateDto requestLectureCreateDto)
+    public async Task<IActionResult> Create([FromForm] RequestLectureCreateDto requestLectureCreateDto)
     {
         try
         {
@@ -53,7 +53,7 @@ public class LectureController : ControllerBase
     
     [Authorize]
     [HttpPost("/lecture/get")]
-    public async Task<IActionResult> Get(RequestLectureGetDto requestLectureGetDto)
+    public async Task<IActionResult> Get([FromForm] RequestLectureGetDto requestLectureGetDto)
     {
         try
         {

@@ -42,7 +42,7 @@ public class PaymentService : IPaymentService
         var payment = new Payment
         {
             UserId = identifier.Id,
-            UserToken = requestPaymentDtos.UserToken,
+            UserPaymentToken = requestPaymentDtos.UserToken,
             DateTime = DateTime.UtcNow
         };
         

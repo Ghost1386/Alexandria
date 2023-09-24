@@ -1,0 +1,12 @@
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\bin\Debug\net7.0\Alexandria.Models.deps.json
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\bin\Debug\net7.0\Alexandria.Models.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\bin\Debug\net7.0\Alexandria.Models.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\Alexandria.Models.csproj.AssemblyReference.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\Alexandria.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\Alexandria.Models.AssemblyInfoInputs.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\Alexandria.Models.AssemblyInfo.cs
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\Alexandria.Models.csproj.CoreCompileInputs.cache
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\Alexandria.Models.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\refint\Alexandria.Models.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\Alexandria.Models.pdb
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.Models\obj\Debug\net7.0\ref\Alexandria.Models.dll

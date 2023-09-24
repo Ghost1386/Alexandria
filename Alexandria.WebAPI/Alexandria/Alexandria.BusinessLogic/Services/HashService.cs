@@ -1,9 +1,10 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
+using Alexandria.BusinessLogic.Interfaces;
 
 namespace Alexandria.BusinessLogic.Services;
 
-public class HashService
+public class HashService : IHashService
 {
     public void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
     {

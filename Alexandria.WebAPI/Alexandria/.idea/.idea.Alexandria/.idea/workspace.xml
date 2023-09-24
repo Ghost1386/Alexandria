@@ -11,42 +11,28 @@
   <component name="ChangeListManager">
     <list default="true" id="c23267aa-6c4f-4460-b268-09d82209f326" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Alexandria/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Alexandria/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Alexandria.BusinessLogic.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Alexandria.BusinessLogic.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/ILectureService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/ILectureService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/LectureService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/LectureService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Alexandria.BusinessLogic.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Alexandria.BusinessLogic.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Alexandria.BusinessLogic.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Alexandria.BusinessLogic.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Alexandria.BusinessLogic.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Alexandria.BusinessLogic.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Debug/net7.0/Alexandria.BusinessLogic.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Debug/net7.0/Alexandria.BusinessLogic.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/ITokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/ITokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Interfaces/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/AuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/AuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/HashService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/HashService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/PaymentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/PaymentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/TokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/Services/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Debug/net7.0/Alexandria.BusinessLogic.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Debug/net7.0/Alexandria.BusinessLogic.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.BusinessLogic/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.Common/Alexandria.Common.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/Alexandria.Common.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.Common/Enums/UserRoleType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/Enums/UserRoleType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.Common/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.Common/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Common/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/ILectureRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/ILectureRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/LectureRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/LectureRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/ITokenRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/TokenRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/Repositorys/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.DAL/obj/Debug/net7.0/Alexandria.DAL.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.DAL/obj/Debug/net7.0/Alexandria.DAL.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.Models/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.Models/Models/Payment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/Models/Payment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.Models/Models/Token.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.Models/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.Models/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.Models/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.Models/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/Controllers/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/Controllers/LectureController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/Controllers/LectureController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Alexandria.WebAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Alexandria.WebAPI.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Alexandria.WebAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Alexandria.WebAPI.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Alexandria.WebAPI.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Alexandria.WebAPI.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Debug/net7.0/Alexandria.WebAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Debug/net7.0/Alexandria.WebAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/Middlewares/JwtAuthMiddleware.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Debug/net7.0/Alexandria.WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/Debug/net7.0/Alexandria.WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alexandria.WebAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Alexandria.WebAPI/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +40,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd1d5c50194fea68ff3559c160230b0ab50f5acf4ce3061bffd6d62958e2182/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Alexandria.BusinessLogic/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Alexandria.Common/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/egor5/OneDrive/Рабочий стол/Alexandria/Alexandria.WebAPI/Alexandria/Alexandria.Models/ApplicationContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -93,7 +79,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.Alexandria.WebAPI: http">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Alexandria.WebAPI: https">
     <configuration name="Alexandria.WebAPI: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Alexandria.WebAPI/Alexandria.WebAPI.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net7.0" />
@@ -168,6 +154,8 @@
       <workItem from="1694858783025" duration="592000" />
       <workItem from="1695465689037" duration="6301000" />
       <workItem from="1695487372372" duration="357000" />
+      <workItem from="1695564211394" duration="1658000" />
+      <workItem from="1695570000660" duration="6450000" />
     </task>
     <task id="LOCAL-00001" summary="added back infastructure">
       <option name="closed" value="true" />
@@ -225,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694550072560</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="backend: added payment">
+      <option name="closed" value="true" />
+      <created>1695565429730</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695565429730</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +237,7 @@
     <MESSAGE value="backend: implement authController" />
     <MESSAGE value="backend: added lecture create" />
     <MESSAGE value="backend: added getting lecture" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend: added getting lecture" />
+    <MESSAGE value="backend: added payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend: added payment" />
   </component>
 </project>

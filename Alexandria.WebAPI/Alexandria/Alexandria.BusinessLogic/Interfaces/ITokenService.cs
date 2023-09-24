@@ -5,9 +5,5 @@ namespace Alexandria.BusinessLogic.Interfaces;
 
 public interface ITokenService
 {
-    void CreateToken(User user);
-
-    Task<Token> GetToken(Identifier identifier);
-
-    Task<string> UpdateToken(User user);
+    string CreateToken(User user);
 }

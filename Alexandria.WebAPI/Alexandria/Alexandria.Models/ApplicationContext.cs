@@ -14,6 +14,5 @@ public class ApplicationContext : DbContext
     public DbSet<Modification> ModeModifications { get; set; }
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Review> Reviews { get; set; }
-    public DbSet<Token> Tokens { get; set; }
     public DbSet<User> Users { get; set; }
 }

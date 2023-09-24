@@ -8,6 +8,8 @@ public interface IUserRepository
 {
     Task<User> GetUser(RequestUserLoginDto requestUserLoginDto);
 
+    Task<User> GetUserByEmail(string email);
+
     Task<User> GetUser(Identifier identifier);
 
     Task<User> CreateUser(User user);
