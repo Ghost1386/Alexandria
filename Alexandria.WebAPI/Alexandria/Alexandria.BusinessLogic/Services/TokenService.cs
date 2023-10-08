@@ -3,7 +3,6 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Alexandria.BusinessLogic.Interfaces;
-using Alexandria.Common.DTOs;
 using Alexandria.Models.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;

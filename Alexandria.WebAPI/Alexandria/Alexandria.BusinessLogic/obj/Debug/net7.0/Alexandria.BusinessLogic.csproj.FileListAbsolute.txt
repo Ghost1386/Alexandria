@@ -17,3 +17,11 @@ C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Ale
 C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\obj\Debug\net7.0\refint\Alexandria.BusinessLogic.dll
 C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\obj\Debug\net7.0\Alexandria.BusinessLogic.pdb
 C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\obj\Debug\net7.0\ref\Alexandria.BusinessLogic.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\bin\Debug\net7.0\x64\tesseract.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\bin\Debug\net7.0\x86\Tesseract.dll
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\bin\Debug\net7.0\tessdata\configs\config.cfg
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\bin\Debug\net7.0\tessdata\eng.traineddata
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\bin\Debug\net7.0\tessdata\equ.traineddata
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\bin\Debug\net7.0\tessdata\osd.traineddata
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\bin\Debug\net7.0\tessdata\pdf.ttf
+C:\Users\egor5\OneDrive\Рабочий стол\Alexandria\Alexandria.WebAPI\Alexandria\Alexandria.BusinessLogic\bin\Debug\net7.0\tessdata\pdf.ttx
